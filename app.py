@@ -1,12 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask
 
 app = Flask(__name__)
 
+# The below line is required for csrf token.
+# Ideally the secret key should be a system variable,
+# but we can/are using anything here.
+app.config["SECRET_KEY"] = "secret-key"
 
-@app.route("/")
-@app.route("/index")
-def index():
-    return render_template("index.html", current_title="custom_title")
+from routes import *
 
 
 if __name__ == "__main__":
