@@ -11,7 +11,7 @@ app.config["SECRET_KEY"] = "secret-key"
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///data.db"
 # Disable midification tracking as it causes significant overheads
 # and it will be disabled by default from future releases
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"]=False
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 # Create an instance of the database.
 db = SQLAlchemy(app)

@@ -10,7 +10,8 @@
         {{ form.title(class="form-control") }}
       </div>
       <div class="col">
-        {{ form.submit(class="btn btn-primary") }}
+        {{ form.submit(class="btn btn-warning") }}
+        <a href="{{ url_for('index') }}" class="btn btn-primary">Cancel</a>
       </div>
     </div>
   </form>
